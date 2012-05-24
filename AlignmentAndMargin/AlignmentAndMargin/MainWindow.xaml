@@ -1,0 +1,14 @@
+﻿<Window x:Class="AlignmentAndMargin.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Button Height="35"
+                Width="100" 
+                HorizontalAlignment="Left"
+                VerticalAlignment="Bottom"
+                Margin="20 5 40 75"
+                Content="Push Me Please!"
+                Padding="10 10 10 10"/>
+    </Grid>
+</Window>

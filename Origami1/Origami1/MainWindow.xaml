@@ -1,0 +1,199 @@
+﻿<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:ed="http://schemas.microsoft.com/expression/2010/drawing" mc:Ignorable="d"
+	x:Class="Origami1.MainWindow"
+	x:Name="Window"
+	Title="MainWindow"
+	Width="1280" Height="728" Background="#FF202020">
+
+	<Grid x:Name="LayoutRoot">
+		
+		<Border x:Name="CenterBorderMenu" 
+			BorderBrush="Gray" 
+			BorderThickness="2"
+			CornerRadius="8"
+			Background="Black" 
+			Height="65" 
+			Margin="320,40,320,10" 
+			VerticalAlignment="Top" 
+			/>		
+		
+		<Border x:Name="CenterBorder" BorderBrush="Gray"
+			CornerRadius="8" 
+			BorderThickness="2" 
+			Margin="320,110,320,10">
+			<Border.Background>
+				<LinearGradientBrush EndPoint="0.296,1.186" StartPoint="0.616,0.248">
+					<GradientStop Color="#FF202020" Offset="0"/>
+					<GradientStop Color="#E5535353" Offset="1"/>
+				</LinearGradientBrush>
+			</Border.Background>
+			
+		</Border>
+		<Border x:Name="CenterHeaderBorder" 
+			BorderBrush="Gray"
+			CornerRadius="8 8 0 0" 
+			BorderThickness="2" 
+			VerticalAlignment="Top" 
+			Margin="320,110,320,535" 
+			Background= "Black">
+			<Grid>
+				<ed:RegularPolygon Fill="#FF0E5EA9" 
+					HorizontalAlignment="Left" 
+					InnerRadius="0.47211" 
+					Margin="8,8,0,8" 
+					PointCount="5" 
+					Stretch="Fill" 
+					Stroke="Black" 
+					Width="29"/>
+					
+				<TextBlock 
+					TextWrapping="Wrap" 
+					Text="Messages" 
+					FontSize="16" 
+					FontFamily="Global Sans Serif" 
+					FontWeight="Bold" 
+					Foreground="#FFEFE9E9" Margin="45,13,0,8" d:LayoutOverrides="Height"/>
+			</Grid>
+		</Border>
+		
+		<Border x:Name="RightBorderMenu" 
+			BorderBrush="Gray" 
+			BorderThickness="2"
+			CornerRadius="8"
+			Background="Black" 
+			HorizontalAlignment="Right"
+			Height="65" 
+			Margin="0,40,10,10" 
+			VerticalAlignment="Top" 
+			Width="306"/>		
+		
+		<Border x:Name="RightBorder" BorderBrush="Gray"
+			CornerRadius="8 8 8 8" 
+			BorderThickness="2" 
+			HorizontalAlignment="Right" 
+			Margin="0,110,10,10" 
+			Width="306">
+		
+			<Border.Background>
+				<LinearGradientBrush EndPoint="-1.017,0.817" StartPoint="0.762,0.813">
+					<GradientStop Color="#FF202020" Offset="0"/>
+					<GradientStop Color="#E5535353" Offset="1"/>
+				</LinearGradientBrush>
+			</Border.Background>
+			
+			<Image Margin="19,78,0,0" Source="dictator.jpg" Stretch="Fill" Width="85" Height="104" HorizontalAlignment="Left" VerticalAlignment="Top" d:LayoutOverrides="Height">
+				<Image.Effect>
+					<DropShadowEffect BlurRadius="30" ShadowDepth="15"/>
+				</Image.Effect>
+			</Image>
+			
+		</Border>
+		
+		<Border x:Name="RightHeaderBorder" BorderBrush="Gray"
+			CornerRadius="8 8 0 0" 
+			BorderThickness="2" 
+			HorizontalAlignment="Right"
+			VerticalAlignment="Top" 
+			Margin="0,110,10,535" 
+			Width="306"
+			Background= "Black">
+			<Grid>
+				<ed:RegularPolygon Fill="#FF0E5EA9" 
+					HorizontalAlignment="Left" 
+					InnerRadius="0.47211" 
+					Margin="8,8,0,8" 
+					PointCount="5" 
+					Stretch="Fill" 
+					Stroke="Black" 
+					Width="29"/>
+					
+				<TextBlock 
+					TextWrapping="Wrap" 
+					Text="Admiral General Aladeen" 
+					FontSize="16" 
+					FontFamily="Global Sans Serif" 
+					FontWeight="Bold" 
+					Foreground="#FFEFE9E9" Margin="45,13,0,8" d:LayoutOverrides="Height"/>
+					
+				<Button Content="Delete" 
+					Height="18"
+					Width="36" 
+					Background="Red"
+					FontSize="9"
+					VerticalAlignment="Top" 
+					HorizontalAlignment="Right" 
+					Margin="10,10,10,10"
+					/>	
+		</Grid>
+		</Border>
+
+		<Border x:Name="LeftBorderMenu" 
+			BorderBrush="Gray" 
+			BorderThickness="2"
+			CornerRadius="8"
+			Background="Black" 
+			HorizontalAlignment="Left"
+			Height="65" 
+			Margin="10,40,0,10" 
+			VerticalAlignment="Top" 
+			Width="306"/>		
+		
+		<Border x:Name="LeftBorder" 
+		BorderBrush="Gray"
+			CornerRadius="8 " 
+			BorderThickness="2" 
+			HorizontalAlignment="Left" 
+			Margin="10,110,0,10" 
+			Width="306">
+		
+			<Border.Background>
+				<LinearGradientBrush EndPoint="-1.017,0.817" StartPoint="0.762,0.813">
+					<GradientStop Color="#FF202020" Offset="0"/>
+					<GradientStop Color="#E5535353" Offset="1"/>
+				</LinearGradientBrush>
+			</Border.Background>
+			
+		</Border>
+		<Border x:Name="LeftHeaderBorder" 
+		BorderBrush="Gray"
+			CornerRadius="8 8 0 0" 
+			BorderThickness="2" 
+			HorizontalAlignment="Left"
+			VerticalAlignment="Top"
+			Margin="10,110,0,535" 
+			Width="306"
+			Background= "Black">
+			<Grid>
+				<TextBlock 
+					TextWrapping="Wrap" 
+					Text="To Do 5/17/2012" 
+					FontSize="16" 
+					FontFamily="Global Sans Serif" 
+					FontWeight="Bold" 
+					Foreground="#FFEFE9E9" Margin="45,13,0,8" d:LayoutOverrides="Height"/>
+				<Image Margin="15,8,0,4.2" Source="todo.png" HorizontalAlignment="Left" Width="30"/>
+			</Grid>
+		</Border>
+		
+		<Border x:Name="TitleBorder" BorderBrush="Gray" 
+			BorderThickness="0 0 0 1" 
+			Height="35" 
+			VerticalAlignment="Top" 
+			Margin="0,0,0,0">
+			<Grid>
+				<TextBlock 
+					TextWrapping="Wrap" 
+					Text="Origami" 
+					FontSize="32" 
+					FontFamily="Global Sans Serif" 
+					FontWeight="Bold" 
+					Foreground="#FFEFE9E9" 
+					HorizontalAlignment="Left"
+					VerticalAlignment="Center"
+					/>
+				</Grid>
+		</Border>
+		
+		
+		
+	</Grid>
+</Window>
