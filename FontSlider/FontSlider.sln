@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FontSlider", "FontSlider\FontSlider.csproj", "{7907CF51-FA8E-4DCD-8E2A-2DC3EC2418DC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7907CF51-FA8E-4DCD-8E2A-2DC3EC2418DC}.Debug|x86.ActiveCfg = Debug|x86
+		{7907CF51-FA8E-4DCD-8E2A-2DC3EC2418DC}.Debug|x86.Build.0 = Debug|x86
+		{7907CF51-FA8E-4DCD-8E2A-2DC3EC2418DC}.Release|x86.ActiveCfg = Release|x86
+		{7907CF51-FA8E-4DCD-8E2A-2DC3EC2418DC}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
