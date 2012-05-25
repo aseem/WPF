@@ -1,0 +1,48 @@
+﻿<UserControl x:Class="TextEditor.TextEditorToolbar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Loaded="UserControl_Loaded">
+    <ToolBarTray>
+        <ToolBar>
+            <Button ToolTip="Open">
+                <Image Source="email.png" />
+            </Button>
+            <Button ToolTip="Save">
+                <Image Source="email_edit.png" />
+            </Button>
+        </ToolBar>
+        <ToolBar>
+            <Button ToolTip="Cut">
+                <Image Source="email.png" />
+            </Button>
+            <Button ToolTip="Copy">
+                <Image Source="email.png" />
+            </Button>
+            <Button ToolTip="Paste">
+                <Image Source="email.png" />
+            </Button>
+        </ToolBar>
+        <ToolBar>
+            <ToggleButton x:Name="boldButton"
+                          ToolTip="Bold">
+                <Image Source="text_bold.png" />
+            </ToggleButton>
+            <ToggleButton x:Name="italicButton"
+                          ToolTip="Italic">
+                <Image Source="text_italic.png" />
+            </ToggleButton>
+            <ToggleButton x:Name="underlineButton"
+                          ToolTip="Underline">
+                <Image Source="text_underline.png" />
+            </ToggleButton>
+            <Separator />
+            <ComboBox x:Name="fonts"
+                      MinWidth="100"
+                      ItemsSource="{x:Static Fonts.SystemFontFamilies}"
+                      ToolTip="Font" />
+            <ComboBox x:Name="fontSize"
+                      MinWidth="40"
+                      ToolTip="Font Size" />
+        </ToolBar>
+    </ToolBarTray>
+</UserControl>

@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{9FC97243-6AA6-45A9-8B7B-6A504A32014A}</ProjectGuid>
+    <ProjectGuid>{F516328D-D04E-489B-9F64-D3BFE76199C5}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>FontViewer</RootNamespace>
-    <AssemblyName>FontViewer</AssemblyName>
+    <RootNamespace>TextEditor</RootNamespace>
+    <AssemblyName>TextEditor</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
@@ -55,8 +55,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="TextPreviewControl.xaml.cs">
-      <DependentUpon>TextPreviewControl.xaml</DependentUpon>
+    <Compile Include="DocumentManager.cs" />
+    <Compile Include="MessageEditor.xaml.cs">
+      <DependentUpon>MessageEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TextEditorToolbar.xaml.cs">
+      <DependentUpon>TextEditorToolbar.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -70,7 +74,11 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="TextPreviewControl.xaml">
+    <Page Include="MessageEditor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TextEditorToolbar.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -98,6 +106,19 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="email.png" />
+    <Resource Include="text_underline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="email_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="text_bold.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="text_italic.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
