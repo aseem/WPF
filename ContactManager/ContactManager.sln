@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactManager", "ContactManager\ContactManager.csproj", "{46240880-C45B-4BCC-B124-0B857E0A6814}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{46240880-C45B-4BCC-B124-0B857E0A6814}.Debug|x86.ActiveCfg = Debug|x86
+		{46240880-C45B-4BCC-B124-0B857E0A6814}.Debug|x86.Build.0 = Debug|x86
+		{46240880-C45B-4BCC-B124-0B857E0A6814}.Release|x86.ActiveCfg = Release|x86
+		{46240880-C45B-4BCC-B124-0B857E0A6814}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,56 @@
+﻿<Window x:Class="ContactManager.Shell"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:uc="clr-namespace:ContactManager.UserControls"
+        Title="Contact Manager"
+        Height="600"
+        Width="800">
+    <DockPanel>
+        <uc:SearchBar DockPanel.Dock="Top" />
+        
+        <StatusBar DockPanel.Dock="Bottom">
+            <StatusBarItem DockPanel.Dock="Right">
+                <Slider x:Name="zoomSlider"
+                        Width="125"
+                        Value="1"
+                        Minimum="0.5"
+                        Maximum="2" />
+            </StatusBarItem>
+            <StatusBarItem DockPanel.Dock="Right">
+                <TextBlock>Zoom:</TextBlock>
+            </StatusBarItem>
+            <StatusBarItem>
+                <TextBlock Text="{Binding StatusText}" />
+            </StatusBarItem>
+        </StatusBar>
+
+        <Expander DockPanel.Dock="Left"
+                    ExpandDirection="Right"
+                    IsExpanded="True"
+                    BorderThickness="0 1 1 1"
+                    BorderBrush="Gray"
+                    Margin="0 2 0 0"
+                    Padding="2">
+            <Expander.Header>
+                <TextBlock Text="Contacts"
+                            FontSize="14"
+                            FontWeight="Bold">
+                    <TextBlock.LayoutTransform>
+                        <RotateTransform Angle="90" />
+                    </TextBlock.LayoutTransform>
+                </TextBlock>
+            </Expander.Header>
+            
+            <uc:SideBar />
+        </Expander>
+
+        <TabControl x:Name="tabs"
+                    Grid.Column="2"
+                    Margin="5 0">
+            <TabControl.LayoutTransform>
+                <ScaleTransform ScaleX="{Binding ElementName=zoomSlider,Path=Value}"
+                                ScaleY="{Binding ElementName=zoomSlider, Path=Value}" />
+            </TabControl.LayoutTransform>
+        </TabControl>
+    </DockPanel>
+</Window>
