@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.ObjectModel;
 using ContactManager.Model;
+using ContactManager.Views;
 
 namespace ContactManager.Presenters
 {
@@ -10,10 +11,7 @@ namespace ContactManager.Presenters
         private ObservableCollection<Contact> _currentContacts;
         private string _statusText;
 
-        public ApplicationPresenter(
-            Shell view,
-            ContactRepository contactRepository)
-            : base(view)
+        public ApplicationPresenter(Shell view, ContactRepository contactRepository) : base(view)
         {
             _contactRepository = contactRepository;
 
@@ -103,7 +101,14 @@ namespace ContactManager.Presenters
 
         public void OpenContact(Contact contact)
         {
-            throw new NotImplementedException();
+            if (contact == null) return;
+                View.AddTab(
+                            new EditContactPresenter(
+                            this,
+                            new EditContactView(),
+                            contact
+                            )
+                        );
         }
 
         public void DisplayAllContacts()
