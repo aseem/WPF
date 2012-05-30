@@ -2,6 +2,7 @@
 using System.Windows.Controls;
 using ContactManager.Presenters;
 using Microsoft.Win32;
+
 namespace ContactManager.Views
 {
     public partial class EditContactView : UserControl
