@@ -44,21 +44,12 @@ namespace ContactManager.Presenters
         {
             if (!string.IsNullOrEmpty(criteria) && criteria.Length > 2)
             {
-                CurrentContacts = new ObservableCollection<Contact>(
-                    _contactRepository.FindByLookup(criteria)
-                    );
-
-                StatusText = string.Format(
-                    "{0} contacts found.",
-                    CurrentContacts.Count
-                    );
+                CurrentContacts = new ObservableCollection<Contact>(_contactRepository.FindByLookup(criteria));
+                StatusText = string.Format("{0} contacts found.", CurrentContacts.Count);
             }
             else
             {
-                CurrentContacts = new ObservableCollection<Contact>(
-                    _contactRepository.FindAll()
-                    );
-
+                CurrentContacts = new ObservableCollection<Contact>(_contactRepository.FindAll());
                 StatusText = "Displaying all contacts.";
             }
         }
@@ -75,10 +66,7 @@ namespace ContactManager.Presenters
 
             _contactRepository.Save(contact);
 
-            StatusText = string.Format(
-                "Contact '{0}' was saved.",
-                contact.LookupName
-                );
+            StatusText = string.Format("Contact '{0}' was saved.",contact.LookupName);
         }
 
         public void DeleteContact(Contact contact)
@@ -88,10 +76,7 @@ namespace ContactManager.Presenters
 
             _contactRepository.Delete(contact);
 
-            StatusText = string.Format(
-                "Contact '{0}' was deleted.",
-                contact.LookupName
-                );
+            StatusText = string.Format("Contact '{0}' was deleted.",contact.LookupName);
         }
 
         public void CloseTab<T>(PresenterBase<T> presenter)
@@ -102,13 +87,7 @@ namespace ContactManager.Presenters
         public void OpenContact(Contact contact)
         {
             if (contact == null) return;
-                View.AddTab(
-                            new EditContactPresenter(
-                            this,
-                            new EditContactView(),
-                            contact
-                            )
-                        );
+                View.AddTab(new EditContactPresenter(this, new EditContactView(),contact));
         }
 
         public void DisplayAllContacts()

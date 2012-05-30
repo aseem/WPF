@@ -35,11 +35,7 @@ namespace ContactManager
                 newTab = new TabItem();
 
                 Binding headerBinding = new Binding(presenter.TabHeaderPath);
-                BindingOperations.SetBinding(
-                    newTab,
-                    TabItem.HeaderProperty,
-                    headerBinding
-                    );
+                BindingOperations.SetBinding(newTab,TabItem.HeaderProperty,headerBinding);
 
                 newTab.DataContext = presenter;
                 newTab.Content = presenter.View;
