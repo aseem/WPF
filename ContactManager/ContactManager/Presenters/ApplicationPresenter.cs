@@ -92,7 +92,7 @@ namespace ContactManager.Presenters
 
         public void DisplayAllContacts()
         {
-            throw new NotImplementedException();
+            View.AddTab(new ContactListPresenter(this, new ContactListView()));
         }
     }
 }
